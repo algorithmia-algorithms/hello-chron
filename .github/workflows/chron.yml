@@ -4,7 +4,7 @@ name: algorithmia-chron
 on:
   schedule:
     # https://crontab.guru/once-a-day
-    - cron: "*/5 * * * *"
+    - cron: "*/1 * * * *"
 jobs:
   stats:
     runs-on: ubuntu-latest
