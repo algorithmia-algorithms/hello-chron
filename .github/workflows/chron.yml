@@ -1,0 +1,11 @@
+on:
+  schedule:
+    # https://crontab.guru/once-a-day
+    - cron: "*/5 * * * *"
+
+name: algorithmia-chron
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "curl -X POST -d '\"chron\"' -H 'Content-Type: text/plain' -H 'Authorization: Simple ${{secrets.API_KEY}}' https://api.algorithmia.com/v1/algo/demo/hello?timeout=300"
