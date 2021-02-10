@@ -21,7 +21,7 @@ jobs:
         run: |
           curl --request POST \
           --url https://api.algorithmia.com/v1/algo/demo/hello?timeout=300 \
-          --header 'Authorization: Simple $API_KEY' \
+          --header 'Authorization: Simple ${{secrets.API_KEY}}' \
           --header 'content-type: application/json' \
           --data '"chron"' \
           --fail
