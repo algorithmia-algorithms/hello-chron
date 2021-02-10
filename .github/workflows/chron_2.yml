@@ -19,4 +19,9 @@ jobs:
     steps:
       - name: Execute an Algorithm request
       - run: |
-        curl -X POST -d '"chron"' -H 'Content-Type: text/plain' -H 'Authorization: Simple $API_KEY' https://api.algorithmia.com/v1/algo/demo/hello?timeout=300
+          curl --request POST \
+          --url https://api.algorithmia.com/v1/algo/demo/hello?timeout=300 \
+          --header 'Authorization: Simple $API_KEY' \
+          --header 'content-type: application/json' \
+          --data '"chron"' \
+          --fail
