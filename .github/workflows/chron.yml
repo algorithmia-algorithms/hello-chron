@@ -6,9 +6,9 @@ name: CHRON
 on:
   push:
     branches: [main]
-#   schedule:
-#     # https://crontab.guru/once-a-day
-#     - cron: "* * * * *"
+  schedule:
+    # https://crontab.guru/once-a-day
+    - cron: "* * * * *"
 
 jobs:
   chron:
