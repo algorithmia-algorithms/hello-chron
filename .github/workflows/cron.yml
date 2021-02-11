@@ -1,6 +1,6 @@
 
 
-name: CHRON
+name: CRON
 
 
 on:
@@ -11,7 +11,7 @@ on:
     - cron: "*/5 * * * *"
 
 jobs:
-  chron:
+  cron:
     runs-on: ubuntu-latest
     steps:
       - name: Execute an Algorithm request
@@ -20,5 +20,5 @@ jobs:
           --url https://api.algorithmia.com/v1/algo/demo/hello?timeout=300 \
           --header 'Authorization: Simple ${{secrets.API_KEY}}' \
           --header 'content-type: application/json' \
-          --data '"chron"' \
+          --data '"cron"' \
           --fail
